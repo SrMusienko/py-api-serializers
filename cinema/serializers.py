@@ -24,8 +24,6 @@ class ActorSerializer(serializers.ModelSerializer):
         fields = ("id", "first_name", "last_name", "full_name")
 
 
-#  --------------------Movies--------------------
-
 class MovieSerializer(serializers.ModelSerializer):
     class Meta:
         model = Movie
@@ -45,8 +43,6 @@ class MovieRetrieveSerializer(MovieSerializer):
     genres = GenreSerializer(many=True)
     actors = ActorSerializer(many=True)
 
-
-#  --------------------MoviesSession--------------------
 
 class MovieSessionSerializer(serializers.ModelSerializer):
     class Meta:
